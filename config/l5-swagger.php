@@ -5,7 +5,7 @@ return [
     'documentations' => [
         'default' => [
             'api' => [
-                'title' => 'API FORNECEDORES - THOMAZ JULIANN BONCOMPAGNI',
+                'title' => 'API FORNECEDORES - THOMAZJB',
             ],
 
             'routes' => [
@@ -55,6 +55,11 @@ return [
              * Route for accessing parsed swagger annotations.
              */
             'docs' => 'docs',
+
+            /*
+             * Route for Oauth2 authentication callback.
+             */
+            'oauth2_callback' => 'api/oauth2-callback',
 
             /*
              * Middleware allows to prevent unexpected access to API documentation
