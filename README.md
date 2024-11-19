@@ -74,8 +74,9 @@ Certifique-se de que ele está rodando antes de executar os passos à seguir;
    ```
 
 ## Já Feito ##
-- Inclusão de Testes Automatizados
-- Inclusão de API externa
-- Repository Pattern
-- CRUD Básico de Fornecedor
-- Funcionalidade de API REST BÁSICA interna
+- Inclusão de Testes Automatizados;
+- Inclusão de API externa;
+- Repository Pattern;
+- CRUD Básico de Fornecedor;
+- Funcionalidade de API REST BÁSICA interna;
+- Auth basico para rotas protegidas;
