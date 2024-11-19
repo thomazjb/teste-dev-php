@@ -1,4 +1,4 @@
-## API SIMPLES DE FORNECEDOR ##
+# API SIMPLES DE FORNECEDOR #
 
 Esta é uma simples aplicação de cadastro e gerenciamento de fornecedores. Tem como principal função, a demonstração da comunicação via REQUEST's HTTP de uma API Rest;
 Possui um sistema de autenticação de rota Oauth Básico através de e-mail e senha. Testes automatizados Utiliza Repository Pattern para abstração de Models com os Controllers, permitindo maior flexibilidade ao interagir com a camada de Dados. 
@@ -10,7 +10,7 @@ Possui um sistema de autenticação de rota Oauth Básico através de e-mail e s
 - MYSQL;
 - PHPMYADMIN;
 
-# COMO UTILIZAR #
+## COMO UTILIZAR ##
 
 1. Clone este repositório:
 
@@ -69,7 +69,7 @@ Possui um sistema de autenticação de rota Oauth Básico através de e-mail e s
    Talvez o passo mais importante que você irá dar.
    ```
 
-# Já Feito #
+## Já Feito ##
 - Inclusão de Testes Automatizados
 - Inclusão de API externa
 - Repository Pattern
