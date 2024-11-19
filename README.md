@@ -11,6 +11,37 @@ Possui um sistema de autenticação de rota Oauth Básico através de e-mail e s
 - MYSQL;
 - PHPMYADMIN;
 
+# ROTAS DA API #
+
+*Algumas rotas existem apenas para gerenciamento da própria aplicação.*
+
+### Rotas Públicas (Sem Necessidade de Autenticação)
+
+| Método | Endpoint                 | Descrição                 |
+|--------|--------------------------|---------------------------|
+| GET    | `/`                      | Página inicial            |
+| POST   | `api/forgot-password`    | Recuperar senha           |
+| POST   | `api/login`              | Login do usuário          |
+| POST   | `api/reset-password`     | Redefinir senha           |
+| POST   | `api/register`           | Registrar novo usuário    |
+
+---
+
+### Rotas Privadas (Requer Autenticação)
+
+#### Fornecedores
+
+| Método     | Endpoint                            | Descrição                          |
+|------------|-------------------------------------|------------------------------------|
+| GET        | `api/fornecedores`                 | Listar todos os fornecedores      |
+| POST       | `api/fornecedores`                 | Criar um novo fornecedor          |
+| GET        | `api/fornecedores/{fornecedores}`  | Detalhar um fornecedor específico |
+| PUT/PATCH  | `api/fornecedores/{fornecedores}`  | Atualizar um fornecedor específico |
+| DELETE     | `api/fornecedores/{fornecedores}`  | Excluir um fornecedor específico  |
+| GET        | `api/fornecedores/buscar/{cnpj}`   | Buscar fornecedor pelo CNPJ       |
+
+
+
 ## COMO UTILIZAR ##
 
 A instalação segue passos simples que todo dev conhece, a unica adição é o ambiente conteinerizado via SAIL, que depende da instalação e configuração do docker para o funcionamento do projeto.
