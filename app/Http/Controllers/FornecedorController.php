@@ -27,7 +27,7 @@ class FornecedorController extends Controller
     /**
      * @OA\Get(
      *     path="api/fornecedores/buscar/{cnpj}",
-     *     summary="Busca um CNPJ na BRASILAPI ",
+     *     summary="Busca um CNPJ na BRASILAPI",
      *     tags={"Fornecedores"},
      *     @OA\Parameter(
      *         description="CNPJ válido.",
@@ -35,7 +35,7 @@ class FornecedorController extends Controller
      *         name="cnpj",
      *         required=true,
      *         @OA\Schema(type="string"),
-     *         @OA\Examples(example="int", value="19131243000197", summary="um cnpj sem caracteres especiais."),
+     *         @OA\Examples(example="int", value="19131243000197", summary="19131243000197"),
      *     ),
      *     @OA\Response(
      *         response=201,

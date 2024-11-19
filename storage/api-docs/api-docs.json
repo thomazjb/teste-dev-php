@@ -10,7 +10,7 @@
                 "tags": [
                     "Fornecedores"
                 ],
-                "summary": "Busca um CNPJ na BRASILAPI ",
+                "summary": "Busca um CNPJ na BRASILAPI",
                 "operationId": "ba9974a85579adb2eb1f2a75b7fff79f",
                 "parameters": [
                     {
@@ -23,7 +23,7 @@
                         },
                         "examples": {
                             "int": {
-                                "summary": "um cnpj sem caracteres especiais.",
+                                "summary": "19131243000197",
                                 "value": "19131243000197"
                             }
                         }
