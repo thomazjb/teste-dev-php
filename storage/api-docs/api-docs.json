@@ -342,6 +342,10 @@
                                     "password": {
                                         "type": "string",
                                         "example": "senha123"
+                                    },
+                                    "password_confirmation": {
+                                        "type": "string",
+                                        "example": "senha123"
                                     }
                                 },
                                 "type": "object"
