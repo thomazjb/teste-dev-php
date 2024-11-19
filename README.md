@@ -15,6 +15,8 @@ Possui um sistema de autenticação de rota Oauth Básico através de e-mail e s
 
 *Algumas rotas existem apenas para gerenciamento da própria aplicação.*
 
+Para ver a documentação completa, acesse a rota `http://localhost/api/documentation` após subir a aplicação!
+
 ### Rotas Públicas (Sem Necessidade de Autenticação)
 
 | Método | Endpoint                 | Descrição                 |
@@ -28,6 +30,17 @@ Possui um sistema de autenticação de rota Oauth Básico através de e-mail e s
 ---
 
 ### Rotas Privadas (Requer Autenticação)
+
+Para acesso à rotas privadas, você pode se registrar atavés da rota `api/register`, passando os parâmetros form-data:
+- name: `Um nome legal`
+- email: `seu@email.com`
+- password: `senhadificil`
+- password_confirmation: `senhadificil`
+
+Ou utilizar o usuário padrão na autenticação da rota via Basic Auth:
+
+Username: `admin@admin.com`
+Password: `123456`
 
 #### Fornecedores
 
