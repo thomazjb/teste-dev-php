@@ -1,10 +1,318 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "API de Fornecedores",
+        "title": "API de Fornecedores - ThomazJB",
         "version": "1.0.0"
     },
     "paths": {
+        "api/fornecedores/buscar/{cnpj}": {
+            "get": {
+                "tags": [
+                    "Fornecedores"
+                ],
+                "summary": "Busca um CNPJ na BRASILAPI ",
+                "operationId": "ba9974a85579adb2eb1f2a75b7fff79f",
+                "parameters": [
+                    {
+                        "name": "cnpj",
+                        "in": "path",
+                        "description": "CNPJ válido.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "um cnpj sem caracteres especiais.",
+                                "value": "19131243000197"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Informações do CNPJ consultado."
+                    }
+                }
+            }
+        },
+        "/api/fornecedores": {
+            "get": {
+                "tags": [
+                    "Fornecedores"
+                ],
+                "summary": "Lista todos os fornecedores",
+                "operationId": "05856d1f4889a1929d1cca01a996c31f",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Parâmetros de paginação.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "example": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Lista de fornecedores",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer",
+                                                "example": 1
+                                            },
+                                            "nome_fantasia": {
+                                                "type": "string",
+                                                "example": "LOJA MANEIRA"
+                                            },
+                                            "razao_social": {
+                                                "type": "string",
+                                                "example": "RAZAO SOCIAL - ME"
+                                            },
+                                            "cnpj": {
+                                                "type": "string",
+                                                "example": "19131243000197"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Fornecedores"
+                ],
+                "summary": "Cria um novo fornecedor",
+                "operationId": "3860e06a108de3184ff5cbdcd548b10f",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "nome_fantasia",
+                                    "razao_social",
+                                    "cnpj"
+                                ],
+                                "properties": {
+                                    "nome_fantasia": {
+                                        "type": "string",
+                                        "example": "LOJA MANEIRA"
+                                    },
+                                    "razao_social": {
+                                        "type": "string",
+                                        "example": "RAZAO SOCIAL - ME"
+                                    },
+                                    "cnpj": {
+                                        "type": "integer",
+                                        "example": "19131243000197"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Fornecedor criado com sucesso"
+                    }
+                }
+            }
+        },
+        "/api/fornecedores/{id}": {
+            "get": {
+                "tags": [
+                    "Fornecedores"
+                ],
+                "summary": "Exibe um fornecedor pelo ID",
+                "operationId": "8ffc26937cfcdc765d9bf0253a1c70ca",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do fornecedor",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "example": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fornecedor encontrado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "nome_fantasia": {
+                                            "type": "string",
+                                            "example": "LOJA MANEIRA"
+                                        },
+                                        "razao_social": {
+                                            "type": "string",
+                                            "example": "RAZAO SOCIAL - ME"
+                                        },
+                                        "cnpj": {
+                                            "type": "string",
+                                            "example": "19131243000197"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Fornecedor não encontrado"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Fornecedores"
+                ],
+                "summary": "Atualiza um fornecedor existente",
+                "operationId": "019be865aed02753760fca8f4a17233e",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do fornecedor",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "example": 1
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "nome_fantasia",
+                                    "razao_social"
+                                ],
+                                "properties": {
+                                    "nome_fantasia": {
+                                        "type": "string",
+                                        "example": "LOJA MANEIRA"
+                                    },
+                                    "razao_social": {
+                                        "type": "string",
+                                        "example": "RAZAO SOCIAL - ME"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "loja@exemplo.com"
+                                    },
+                                    "telefone": {
+                                        "type": "string",
+                                        "example": "11987654321"
+                                    },
+                                    "endereco": {
+                                        "type": "string",
+                                        "example": "Rua X, 123"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Fornecedor atualizado com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "nome_fantasia": {
+                                            "type": "string",
+                                            "example": "LOJA MANEIRA"
+                                        },
+                                        "razao_social": {
+                                            "type": "string",
+                                            "example": "RAZAO SOCIAL - ME"
+                                        },
+                                        "email": {
+                                            "type": "string",
+                                            "example": "loja@exemplo.com"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Fornecedor não encontrado"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Fornecedores"
+                ],
+                "summary": "Exclui um fornecedor pelo ID",
+                "operationId": "f6c79edee27a08713e1c1074686502b7",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do fornecedor",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "example": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Fornecedor excluído com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Fornecedor excluído com sucesso."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Fornecedor não encontrado"
+                    }
+                }
+            }
+        },
         "/api/register": {
             "post": {
                 "tags": [
@@ -71,6 +379,10 @@
         }
     },
     "tags": [
+        {
+            "name": "Fornecedores",
+            "description": "Fornecedores"
+        },
         {
             "name": "Usuários",
             "description": "Usuários"

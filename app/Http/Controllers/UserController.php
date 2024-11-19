@@ -26,6 +26,13 @@ class UserController extends Controller
         $this->repository = $repository;
     }
 
+    /**
+     * @OA\Info(
+     *     title="API de Fornecedores - ThomazJB",
+     *     version="1.0.0"
+     * )
+     */
+
     public function login(LoginRequest $request): Response
     {
         $request->authenticate();
@@ -47,31 +54,31 @@ class UserController extends Controller
     }
 
 
-/**
- * @OA\Post(
- *     path="/api/register",
- *     summary="Cria um novo usuário de autenticação",
- *     tags={"Usuários"},
- *     @OA\RequestBody(
- *         required=true,
- *         @OA\JsonContent(
- *             required={"name", "email", "password"},
- *             @OA\Property(property="name", type="string", example="Thomaz"),
- *             @OA\Property(property="email", type="string", example="thomaz@example.com"),
- *             @OA\Property(property="password", type="string", example="senha123")
- *         )
- *     ),
- *     @OA\Response(
- *         response=201,
- *         description="Usuário criado com sucesso",
- *         @OA\JsonContent(
- *             @OA\Property(property="id", type="integer", example=1),
- *             @OA\Property(property="name", type="string", example="Thomaz"),
- *             @OA\Property(property="email", type="string", example="thomaz@example.com")
- *         )
- *     )
- * )
- */
+    /**
+     * @OA\Post(
+     *     path="/api/register",
+     *     summary="Cria um novo usuário de autenticação",
+     *     tags={"Usuários"},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             required={"name", "email", "password"},
+     *             @OA\Property(property="name", type="string", example="Thomaz"),
+     *             @OA\Property(property="email", type="string", example="thomaz@example.com"),
+     *             @OA\Property(property="password", type="string", example="senha123")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=201,
+     *         description="Usuário criado com sucesso",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="id", type="integer", example=1),
+     *             @OA\Property(property="name", type="string", example="Thomaz"),
+     *             @OA\Property(property="email", type="string", example="thomaz@example.com")
+     *         )
+     *     )
+     * )
+     */
 
     public function store(Request $request)
     {
