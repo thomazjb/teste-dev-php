@@ -1,0 +1,79 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de Fornecedores",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/register": {
+            "post": {
+                "tags": [
+                    "Usuários"
+                ],
+                "summary": "Cria um novo usuário de autenticação",
+                "operationId": "953cbd71099d3540e7e8ca0f408851d8",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "email",
+                                    "password"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Thomaz"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "thomaz@example.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "senha123"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Usuário criado com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "Thomaz"
+                                        },
+                                        "email": {
+                                            "type": "string",
+                                            "example": "thomaz@example.com"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Usuários",
+            "description": "Usuários"
+        }
+    ]
+}

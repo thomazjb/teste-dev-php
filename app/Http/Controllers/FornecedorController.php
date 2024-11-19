@@ -17,6 +17,13 @@ class FornecedorController extends Controller
         $this->cnpjService = $cnpjService;
     }
 
+    /**
+     * @OA\Info(
+     *     title="API de Fornecedores",
+     *     version="1.0.0"
+     * )
+     */
+
     public function buscarCnpj($cnpj)
     {
         $data = $this->cnpjService->buscarCnpj($cnpj);
