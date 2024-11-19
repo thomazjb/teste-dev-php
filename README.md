@@ -14,7 +14,8 @@ Possui um sistema de autenticação de rota Oauth Básico através de e-mail e s
 ## COMO UTILIZAR ##
 
 A instalação segue passos simples que todo dev conhece, a unica adição é o ambiente conteinerizado via SAIL, que depende da instalação e configuração do docker para o funcionamento do projeto.
-Certifique-se de que ele está rodando antes de executar os passos à seguir;
+Certifique-se de que ele está rodando antes de executar os passos à seguir; 
+<a href="https://docs.docker.com/desktop/setup/install/windows-install/">Instalação Docker</a>
 
 1. Clone este repositório:
 
