@@ -1,7 +1,7 @@
 # API SIMPLES DE FORNECEDOR #
 
 Esta é uma simples aplicação de cadastro e gerenciamento de fornecedores. Tem como principal função, a demonstração da comunicação via REQUEST's HTTP de uma API Rest;
-Possui um sistema de autenticação de rota Oauth Básico através de e-mail e senha. Testes automatizados Utiliza Repository Pattern para abstração de Models com os Controllers, permitindo maior flexibilidade ao interagir com a camada de Dados. 
+Possui um sistema de autenticação de rota Oauth Básico através de e-mail e senha, testes automatizados, documentação Swagger e utiliza Repository Pattern para abstração de Models com os Controllers, permitindo maior flexibilidade ao interagir com a camada de Dados. 
 
 # TECNOLOGIAS #
 - PHP 8.3;
@@ -10,6 +10,7 @@ Possui um sistema de autenticação de rota Oauth Básico através de e-mail e s
 - AMBIENTE DOCKERIZADO VIA SAIL;
 - MYSQL;
 - PHPMYADMIN;
+- SWAGGER;
 
 # ROTAS DA API #
 
@@ -115,13 +116,9 @@ Certifique-se de que ele está rodando antes de executar os passos à seguir;
 10. Seja Feliz
 
    ```
-   Talvez o passo mais importante que você irá dar.
+   Talvez o passo mais importante que você irá dar na vida.
    ```
 
-## Já Feito ##
-- Inclusão de Testes Automatizados;
-- Inclusão de API externa;
-- Repository Pattern;
-- CRUD Básico de Fornecedor;
-- Funcionalidade de API REST BÁSICA interna;
-- Auth basico para rotas protegidas;
+Obrigado. 
+<a href="https://www.linkedin.com/in/thomazjb/">LinkedIn</a>
+Thomaz Juliann Boncompagni.
