@@ -77,11 +77,7 @@ class FornecedorController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $this->cnpjService->buscarCnpj($request->cnpj);
-        dd($data['type']);
-        if (isset($data['error'])) {
-            return response()->json(['error' => $data['error']], 400);
-        }
+
         $validated = $request->validate([
             'nome_fantasia' => 'required|string|max:255',
             'razao_social' => 'required|string|max:255',
